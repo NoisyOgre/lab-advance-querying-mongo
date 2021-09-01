@@ -168,7 +168,7 @@ limit: 10
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-query: {$and : [{number_of_employees: {$gt:2000}}, {founded_year: {$lt:2010}}, {"acquisition.acquired_year":{$ne:2001}}]}
+query: {$and : [{number_of_employees: {$gt:2000}}, {founded_year: {$lt:2010}}, {"acquisition.acquired_year":{$gte:2001}}]}
 projection:
 sort:
 skip:
